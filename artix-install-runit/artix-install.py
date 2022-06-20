@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import os
 
 os.system("clear")
@@ -25,3 +27,4 @@ os.system("basestrap -i /mnt base base-devel linux linux-headers linux-firmware 
 os.system("fstabgen -U /mnt >> /mnt/etc/fstab")
 os.system("cp $(pwd)/chroot.py /mnt")
 os.system("artix-chroot /mnt /bin/bash")
+os.system("rm -rf /mnt/chroot.py")
