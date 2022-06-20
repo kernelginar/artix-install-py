@@ -53,7 +53,7 @@ os.system("clear")
 os.system("pacman -S grub efibootmgr os-prober")
 os.system("clear")
 
-os.system("grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Linux")
+os.system("grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Artix")
 os.system("grub-mkconfig -o /boot/grub/grub.cfg")
 time.sleep(4)
 os.system("clear")
