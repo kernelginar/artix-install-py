@@ -13,6 +13,8 @@ if locale == 'en':
     os.system("clear")
     os.system("touch /etc/locale.conf")
     os.system("echo 'LANG=en_US.UTF-8 UTF-8' >> /etc/locale.conf")
+    os.system("touch /etc/vconsole.conf")
+    os.system("echo KEYMAP=trq >> /etc/vconsole.conf")
     os.system("clear")
 elif locale == 'tr':
     os.system("echo 'tr_TR.UTF-8 UTF-8' >> /etc/locale.gen")
@@ -20,6 +22,8 @@ elif locale == 'tr':
     os.system("clear")
     os.system("touch /etc/locale.conf")
     os.system("echo 'LANG=tr_TR.UTF-8 UTF-8' >> /etc/locale.conf")
+    os.system("touch /etc/vconsole.conf")
+    os.system("echo KEYMAP=trq >> /etc/vconsole.conf")
     os.system("clear")
 
 os.system("clear")
@@ -40,7 +44,6 @@ os.system("clear")
 
 #packages
 os.system("pacman -Sy networkmanager networkmanager-runit")
-os.system("ln -s /etc/runit/sv/NetworkManager /run/runit/service")
 os.system("clear")
 
 os.system("pacman -S xf86-input-libinput")
