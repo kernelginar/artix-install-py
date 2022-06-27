@@ -12,14 +12,14 @@ if locale == 'en':
     os.system("locale-gen")
     os.system("clear")
     os.system("touch /etc/locale.conf")
-    os.system("echo 'LANG=en_US.UTF-8 UTF-8' >> /etc/locale.conf")
+    os.system("echo 'LANG=en_US.UTF-8' >> /etc/locale.conf")
     os.system("clear")
 elif locale == 'tr':
     os.system("echo 'tr_TR.UTF-8 UTF-8' >> /etc/locale.gen")
     os.system("locale-gen")
     os.system("clear")
     os.system("touch /etc/locale.conf")
-    os.system("echo 'LANG=tr_TR.UTF-8 UTF-8' >> /etc/locale.conf")
+    os.system("echo 'LANG=tr_TR.UTF-8' >> /etc/locale.conf")
     os.system("clear")
 
 os.system("clear")
@@ -44,7 +44,7 @@ os.system("clear")
 print('''
 After restarting the computer, enter the command "dinitctl enable NetworkManager"
 ''')
-time.sleep(2)
+time.sleep(4)
 os.system("clear")
 
 os.system("pacman -S xf86-input-libinput")
