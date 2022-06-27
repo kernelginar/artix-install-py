@@ -13,8 +13,6 @@ if locale == 'en':
     os.system("clear")
     os.system("touch /etc/locale.conf")
     os.system("echo 'LANG=en_US.UTF-8 UTF-8' >> /etc/locale.conf")
-    os.system("touch /etc/vconsole.conf")
-    os.system("echo KEYMAP=trq >> /etc/vconsole.conf")
     os.system("clear")
 elif locale == 'tr':
     os.system("echo 'tr_TR.UTF-8 UTF-8' >> /etc/locale.gen")
