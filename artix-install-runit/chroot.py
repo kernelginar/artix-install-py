@@ -44,9 +44,9 @@ os.system("clear")
 os.system("pacman -Sy networkmanager networkmanager-runit")
 os.system("clear")
 print('''
-After restarting the computer, enter the command "sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service"
+After restarting the computer, enter the command "sudo ln -s /etc/runit/sv/NetworkManager /run/runit/service ; sudo sv start NetworkManager"
 ''')
-time.sleep(4)
+time.sleep(6)
 os.system("clear")
 
 os.system("pacman -S xf86-input-libinput")
