@@ -32,7 +32,7 @@ os.system("echo " f"{hostname} " ">> /etc/hostname")
 
 os.system("echo '127.0.0.1      localhost' >> /etc/hosts")
 os.system("echo '::1            localhost' >> /etc/hosts")
-
+os.system("echo '127.0.1.1            '" f"{hostname}"".localdomain " f"{hostname}" " >> /etc/hosts")
 os.system("clear")
 
 #root user password
@@ -61,10 +61,10 @@ os.system("clear")
 
 os.system("grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=Artix")
 os.system("grub-mkconfig -o /boot/grub/grub.cfg")
-time.sleep(4)
+time.sleep(2)
 os.system("clear")
 
-#Add user
+#useradd
 username = input("Username: ")
 os.system("useradd -m -g users -G wheel,storage,power,audio,video,network -s /bin/bash " f"{username}")
 print("Normal user password: ")
