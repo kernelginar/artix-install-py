@@ -44,7 +44,7 @@ os.system("clear")
 print('''
 After restarting the computer, enter the command "dinitctl enable NetworkManager"
 ''')
-time.sleep(4)
+time.sleep(6)
 os.system("clear")
 
 os.system("pacman -S xf86-input-libinput")
