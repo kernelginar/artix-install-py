@@ -30,7 +30,7 @@ os.system("echo " f"{hostname} " ">> /etc/hostname")
 
 os.system("echo '127.0.0.1       localhost' >> /etc/hosts")
 os.system("echo '::1             localhost' >> /etc/hosts")
-os.system("echo '127.0.1.1             '" f"{hostname}"".localdomain " f"{hostname}" " >> /etc/hosts")
+os.system("echo '127.0.1.1        '" f"{hostname}"".localdomain " f"{hostname}" " >> /etc/hosts")
 os.system("clear")
 
 #root user password
@@ -64,5 +64,4 @@ os.system("useradd -m -g users -G wheel,storage,power,audio,video,network -s /bi
 print("Normal user password: ")
 os.system("passwd " f"{username}")
 os.system("clear")
-time.sleep(2)
 os.system("EDITOR=nano visudo")
