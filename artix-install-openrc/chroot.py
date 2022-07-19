@@ -30,7 +30,7 @@ os.system("echo " f"{hostname} " ">> /etc/hostname")
 
 os.system("echo '127.0.0.1       localhost' >> /etc/hosts")
 os.system("echo '::1             localhost' >> /etc/hosts")
-os.system("echo '127.0.1.1        '" f"{hostname}"".localdomain " f"{hostname}" " >> /etc/hosts")
+os.system("echo '127.0.1.1       '" f"{hostname}"".localdomain " f"{hostname}" " >> /etc/hosts")
 os.system("clear")
 
 #root user password
