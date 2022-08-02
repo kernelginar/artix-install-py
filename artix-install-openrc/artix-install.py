@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-
+#!/usr/bin/env python3
 import os
 
 os.system("clear")
@@ -20,11 +19,12 @@ print(" ")
 boot_partition = input("Boot partition (example /dev/sda1), /dev/???: ")
 os.system("mkfs.fat -F32 " f"{boot_partition}")
 os.system("mkdir -p /mnt/boot/efi")
-os.system("mount " f"{boot_partition} " "/mnt/boot/efi")
 
 os.system("clear")
 os.system("basestrap -i /mnt base base-devel linux linux-headers linux-firmware openrc git nano")
-os.system("fstabgen -U /mnt >> /mnt/etc/fstab")
+os.system("fstabgen -U /mnt > /mnt/etc/fstab")
+os.system("mount " f"{boot_partition} " "/mnt/boot/efi")
+
 os.system("cp $(pwd)/chroot.py /mnt")
 os.system("artix-chroot /mnt /bin/bash")
 os.system("rm -rf /mnt/chroot.py")
