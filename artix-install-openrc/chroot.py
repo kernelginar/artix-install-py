@@ -1,7 +1,13 @@
-#!/usr/bin/env python
-
+#!/usr/bin/env python3
 import os
 import time
+
+os.system("clear")
+
+print("Example: Europe/Istanbul, Europe/Zurich, America/New_York")
+timezone = input("Timezone: ")
+os.system("ln -sf /usr/share/zoneinfo/" f"{timezone} " "/etc/localtime")
+os.system("hwclock --systohc")
 
 os.system("clear")
 
@@ -64,4 +70,4 @@ os.system("useradd -m -g users -G wheel,storage,power,audio,video,network -s /bi
 print("Normal user password: ")
 os.system("passwd " f"{username}")
 os.system("clear")
-os.system("EDITOR=nano visudo")
+os.system("visudo")
